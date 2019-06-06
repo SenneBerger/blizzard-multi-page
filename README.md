@@ -1,0 +1,1 @@
+# blizzard-multi-page
