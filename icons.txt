@@ -1,0 +1,23 @@
+
+SETTINGS
+<i class="fas fa-cogs"></i> settings
+<i class="fas fa-music"></i> sound
+<i class="fas fa-user-friends"></i> friends
+<i class="fas fa-microphone-alt"></i> voice
+<i class="fas fa-video"></i> streaming
+<i class="fas fa-download"></i> install
+<i class="fas fa-tools"></i> game settings
+<i class="fas fa-question-circle"></i> about
+<i class="fas fa-flask"></i> beta
+
+
+REST
+<i class="fas fa-search"></i> search
+<i class="fas fa-heart"></i> heart
+<i class="fas fa-bell"></i> notification
+<i class="fas fa-users"></i> friends
+<i class="fas fa-comment-dots"></i>  chats
+<i class="fas fa-users"></i> group
+<i class="fas fa-comment-alt"></i> msg
+<i class="fas fa-bell"></i> notif
+<i class="far fa-check-square"></i> check

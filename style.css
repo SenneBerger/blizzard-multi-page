@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e5e5e5;
+  background-image: url("img/games-background.jpg");
+  background-repeat: no-repeat;
+  background-color: #cccccc;
+
+}
+.games {
+  display: grid;
+  grid-template-areas:
+    " header header"
+    "sidebar content"
+}
+.game-header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 500px 400px 280px;
+  grid-template-areas:
+    "left . right";
+  width: 1200px;
+  height: 42px;
+  border-bottom: 0.1px solid grey;
+
+
+}
+.header-left {
+  grid-area: left;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  word-spacing: 20px;
+
+
+}
+.header-right {
+  grid-area: right;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  word-spacing: 20px;
+
+}
+.header-left:hover {
+  color: #ffffff;
+}
+
+.sidebar{
+  grid-area: sidebar;
+  width: 250px;
+}
+.blizzard ul{
+  list-style: none;
+  font-size: 13px;
+  margin: 0;
+  border-right: 0.1px solid grey;
+
+}
+li img{
+  height: 22px;
+  padding-right: 10px;
+  margin-bottom: -6px;
+}
+ul li:first-child{
+  font-size: 10px;
+}
+ul li{
+  padding: 4px;
+  color: #c6c6c6;
+
+}
+ul.blizz-list {
+  height: 250px;
+}
+.games-content{
+  grid-area: content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "logo . ."
+    "thrall cardbundle overwatch"
+    "install locate .";
+
+}
+
+.thrall {
+  grid-area: thrall;
+
+}
+.overwatch-shop {
+  grid-area: overwatch;
+}
