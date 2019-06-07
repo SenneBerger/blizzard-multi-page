@@ -1,0 +1,255 @@
+* {
+   margin: 0; 
+}
+
+.news {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e5e5e5;
+    background-image: url("../../../background-overwatch.jpg");
+    background-size: 100%;
+    background-color: #cccccc;
+    width: 1200px;
+
+    display: grid;
+    grid-template-columns: 250px auto;
+    margin: 0;
+    grid-template-areas:
+      "header header"
+      "sidebar content"
+  }
+
+  i:hover{
+    -webkit-transform:scale(1.3);
+    transition: all .2s ease;
+    vertical-align: middle;
+  }
+
+/* Header on all pages */
+.game-header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 500px 400px 280px;
+    grid-template-areas:
+      "left . right";
+    width: 1200px;
+    height: 42px;
+    border-bottom: 0.1px solid grey;
+}
+
+.header-left {
+    grid-area: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    word-spacing: 20px; 
+}
+
+.header-right {
+    grid-area: right;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    word-spacing: 20px;
+}
+
+.header-left:hover {
+    color: #ffffff;
+}
+
+/* under header */
+.news-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30px;
+    width: 1200px;
+    margin: 0;
+    font-size: 15px;
+}
+
+.news-list div:hover {
+    -webkit-transform:scale(1.1);
+    transition: all .2s ease;
+    vertical-align: middle;
+}
+
+/* News-content */
+.news-content {
+    width: 950px;
+}
+
+.news-title p {
+    grid-area: content;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 20px 0px;
+}
+
+.news-topics img {
+    height: 150px;
+    width: 290px;
+}
+
+.news-topics div {
+    display: flex;
+    justify-content: center;
+}
+
+.news-topics {
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 150px;
+    grid-template-areas:
+        "topic1 topic2 topic3";  
+}
+
+.topic1 {
+    grid-area: topic1;
+    overflow: hidden;
+}
+
+.topic1 img:hover {
+    -webkit-transform:scale(1.3);
+    transition: all .8s ease;
+    vertical-align: middle;
+}
+
+.topic2 {
+    grid-area: topic2;
+    overflow: hidden;
+}
+
+.topic2 img:hover {
+    -webkit-transform:scale(1.3);
+    transition: all .8s ease;
+    vertical-align: middle;
+}
+
+.topic3 {
+    grid-area: topic3;
+    overflow: hidden;
+}
+
+.topic3 img:hover {
+    -webkit-transform:scale(1.3);
+    transition: all .8s ease;
+    vertical-align: middle;
+}
+
+/* Recent news */
+.recent-news img {
+    height: 100px;
+    width: 200px;
+}
+
+.recent-news h2 {
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 5px 0px;
+    color: grey;
+}
+
+.recent-news h3 {
+    font-size: 20px;
+    padding: 5px 0px;
+}
+
+.recent-news p {
+    font-size: 15px;
+    padding: 5px 0px;
+    color: #939496;
+    font-weight: bolder
+}
+
+.recent-news i {
+    padding: 5px 0px;
+}
+
+.recent-news i:hover{
+    -webkit-transform:scale(1.1);
+    transition: all .2s ease;
+    vertical-align: middle;
+  }
+
+.recent-news div {
+    border-bottom: 0.1px solid grey;
+}
+
+.recent-news {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 200px 700px;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "pic1 RN1"
+        "pic2 RN2"
+        "pic3 RN3"
+        "pic4 RN4"
+        "pic5 RN5";
+}
+
+.pic-N1 {
+    border-top: 0.1px solid grey;
+    grid-area: pic1;
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.RN1-content {
+    border-top: 0.1px solid grey;
+    grid-area: RN1;
+    padding: 15px 0px 15px 25px;
+}
+
+.pic-N2 {
+    grid-area: pic2;
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.RN2-content {
+    grid-area: RN2;
+    padding: 15px 0px 15px 25px;
+}
+
+.pic-N3 {
+    grid-area: pic3;
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.RN3-content {
+    grid-area: RN3;
+    padding: 15px 0px 15px 25px;
+}
+
+.pic-N4 {
+    grid-area: pic4;
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.RN4-content {
+    grid-area: RN4;
+    padding: 15px 0px 15px 25px;
+}
+
+.pic-N5 {
+    grid-area: pic5;
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.RN5-content {
+    grid-area: RN5;
+    padding: 15px 0px 15px 25px;
+}
