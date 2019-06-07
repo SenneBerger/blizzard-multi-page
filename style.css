@@ -1,3 +1,13 @@
+
+
+
+/*      Most of this should be allright.
+        There might be some things we want to change or reposition.
+        Give me a shout on Ryver if you want to change something.       */
+
+
+
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #e5e5e5;
@@ -6,6 +16,7 @@ body {
   background-color: #cccccc;
 
 }
+/* Primary grid for everything */
 .games {
   display: grid;
   grid-template-columns: 250px auto;
@@ -14,6 +25,7 @@ body {
     " header header"
     "sidebar content"
 }
+/* Header grid */
 .game-header {
   grid-area: header;
   display: grid;
@@ -25,6 +37,7 @@ body {
   border-bottom: 0.1px solid grey;
 
 }
+/* Header grid position */
 .header-left {
   grid-area: left;
   display: flex;
@@ -34,6 +47,7 @@ body {
 
 
 }
+/* Header grid position */
 .header-right {
   grid-area: right;
   display: flex;
@@ -42,14 +56,13 @@ body {
   word-spacing: 20px;
 
 }
-.header-left:hover {
-  color: #ffffff;
-}
 
+/* sidebar grid */
 .sidebar{
   grid-area: sidebar;
   width: 250px;
 }
+/* sidebar list styling */
 .blizzard ul{
   list-style: none;
   font-size: 13px;
@@ -57,17 +70,21 @@ body {
   border-right: 0.1px solid grey;
 
 }
+/* list icon styling */
 li img{
   height: 22px;
   padding-right: 10px;
   margin-bottom: -6px;
 }
+/* list header styling */
 .blizzard-list-name {
   font-size: 10px;
   color: grey;
   padding-left: 40px;
   padding-top: 5px;
+  border-right: 0.1px solid grey;
 }
+/* list header styling */
 .Partner-games-list{
   font-size: 10px;
   color: grey;
@@ -76,19 +93,24 @@ li img{
   border-right: 0.1px solid grey;
 
 }
+/* list styling */
 ul li{
   padding: 4px;
   color: #c6c6c6;
 
 }
+/* List style */
 ul.blizz-list {
   height: 250px;
 }
-.blizzard ul li:hover{
-  background-color: opacity: 0.3 grey ;
+/* Hovering list items NEED TO CHANGE THIS!!!!*/
+ul li:hover{
+  background-color: grey;
+  opacity: 0.2;
 
 
 }
+/* Content grid */
 .games-content{
   grid-area: content;
   display: grid;
@@ -102,13 +124,14 @@ ul.blizz-list {
     "install locate .";
 
 }
+/* Wow bfa logo position */
 .wow-logo {
   grid-area: logo;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+/*Thrall image position */
 .thrall {
   grid-area: thrall;
   display: flex;
@@ -118,7 +141,7 @@ ul.blizz-list {
   margin-left: 20px;
 
 }
-
+/* gif position */
 .cardbundle {
   grid-area: cardbundle;
   display: flex;
@@ -126,7 +149,7 @@ ul.blizz-list {
   align-items: center;
   overflow: hidden;
 }
-
+/* Overwatch image position */
 .overwatch-shop {
   grid-area: overwatch;
   display: flex;
@@ -135,9 +158,11 @@ ul.blizz-list {
   overflow: hidden;
   margin-right: 40px;
 }
+/* Page size */
 html{
   max-width: 1200px;
 }
+/* Install button position */
 .install-button{
   grid-area: install;
   display: flex;
@@ -147,6 +172,7 @@ html{
   padding-left: 27px;
   padding-top: 10px;
 }
+/* options and redeem a code text position */
 .wow-icons{
   grid-area: icon;
   display: flex;
@@ -155,43 +181,58 @@ html{
   font-size: 12px;
 
 }
-
+/* options and redeem a code icon position */
 .wow-icons i{
   padding-left: 30px;
   padding-right: 7px;
 }
+/* options and redeem a code icons become bigger on hover */
 .wow-icons i:hover{
   -webkit-transform:scale(1.1)
 }
+/* allready installed location */
 div.installed{
   grid-area: locate;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 
-
+/* thrall image styling */
 }
 .thrall img{
   -webkit-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 }
+
 .thrall img:hover{
   -webkit-transform:scale(1.3);
   transition: all .8s ease;
   vertical-align: middle;
-
+/* gif styling */
 }
 .cardbundle img{
   -webkit-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 }
+.cardbundle img:hover{
+  -webkit-transform:scale(1.3);
+  transition: all .8s ease;
+  vertical-align: middle;
+}
+/* overwatch image styling */
 .overwatch-shop img{
   -webkit-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 }
+.overwatch-shop img:hover{
+  -webkit-transform:scale(1.3);
+  transition: all .8s ease;
+  vertical-align: middle;
+}
+/* grid area: install position & styling */
 .install-button div:first-child{
   color: grey;
   font-size: 10px;
@@ -221,25 +262,14 @@ box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
   color: grey;
   font-size: 13px;
 }
-{
-  border: 0.1px solid grey;
-}
-.cardbundle img:hover{
-  -webkit-transform:scale(1.3);
-  transition: all .8s ease;
-  vertical-align: middle;
-}
-.overwatch-shop img:hover{
-  -webkit-transform:scale(1.3);
-  transition: all .8s ease;
-  vertical-align: middle;
-}
+/* hovering over icon will make them bigger */
 i:hover{
   -webkit-transform:scale(1.3);
   transition: all .2s ease;
   vertical-align: middle;
 
 }
+/* hovering over list items will make them bigger */
 .blizz-list li:hover{
   -webkit-transform:scale(1.1);
   transition: all .2s ease;
@@ -258,6 +288,7 @@ i:hover{
 .partner-list li:first-child:hover{
 -webkit-transform:scale(1.0);
 }
+/* specific (subscription) icon positioning */
 .fas.fa-history{
   border: 1px solid grey;
   border-radius: 2px;
@@ -265,11 +296,9 @@ i:hover{
   margin-right: 35px;
   margin-bottom: 7px;
 }
+/* hovering over sub icon will make it bigger */
 .fas.fa-history:hover{
   -webkit-transform:scale(1.1);
   transition: all .2s ease;
   vertical-align: middle;
-}
-.header-right p{
-
 }
