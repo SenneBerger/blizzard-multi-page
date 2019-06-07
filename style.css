@@ -24,7 +24,6 @@ body {
   height: 42px;
   border-bottom: 0.1px solid grey;
 
-
 }
 .header-left {
   grid-area: left;
@@ -74,15 +73,19 @@ ul li{
 ul.blizz-list {
   height: 250px;
 }
+.blizzard ul li:hover{
+  background-color: opacity: 0.3 grey ;
+
+
+}
 .games-content{
   grid-area: content;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 120px 40px 150px 140px;
+  grid-template-rows: 120px 40px 160px 130px;
   margin: 0;
   grid-template-areas:
-    "logo . ."
+    "logo . dance"
     "icon . ."
     "thrall cardbundle overwatch"
     "install locate .";
@@ -100,6 +103,8 @@ ul.blizz-list {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  margin-left: 20px;
 
 }
 
@@ -108,6 +113,7 @@ ul.blizz-list {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .overwatch-shop {
@@ -115,6 +121,8 @@ ul.blizz-list {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  margin-right: 40px;
 }
 html{
   max-width: 1200px;
@@ -125,15 +133,24 @@ html{
   justify-content: space-between;
   flex-direction: column;
   align-content: space-around;
-  padding-left: 15px;
+  padding-left: 27px;
   padding-top: 10px;
 }
 .wow-icons{
   grid-area: icon;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: 12px;
+
+}
+
+.wow-icons i{
+  padding-left: 30px;
+  padding-right: 7px;
+}
+.wow-icons i:hover{
+  -webkit-transform:scale(1.1)
 }
 div.installed{
   grid-area: locate;
@@ -170,7 +187,9 @@ box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 }
 .install-button div:nth-child(2){
   border: 0.1px solid grey;
-  padding: 5px 5px 5px 3px;
+  padding: 6px 6px 6px 3px;
+  font-size: 14px;
+  margin-right: 40px;
 }
 .install-button div:last-child{
   display: flex;
@@ -180,6 +199,7 @@ box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
   background: #0299db;
   padding: 10px 10px 10px 10px;
   font-size: 35px;
+  margin: 5px 40px 5px 0px;
 }
 
 .install-button div:last-child:hover{
@@ -189,4 +209,56 @@ box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 .installed{
   color: grey;
   font-size: 13px;
+}
+{
+  border: 0.1px solid grey;
+}
+.cardbundle img:hover{
+  -webkit-transform:scale(1.3);
+  transition: all .8s ease;
+  vertical-align: middle;
+}
+.overwatch-shop img:hover{
+  -webkit-transform:scale(1.3);
+  transition: all .8s ease;
+  vertical-align: middle;
+}
+i:hover{
+  -webkit-transform:scale(1.3);
+  transition: all .2s ease;
+  vertical-align: middle;
+
+}
+.blizz-list li:hover{
+  -webkit-transform:scale(1.1);
+  transition: all .2s ease;
+  vertical-align: middle;
+
+}
+.blizz-list li:first-child:hover{
+-webkit-transform:scale(1.0);
+}
+
+.partner-list li:hover{
+  -webkit-transform:scale(1.1);
+  transition: all .2s ease;
+  vertical-align: middle;
+}
+.partner-list li:first-child:hover{
+-webkit-transform:scale(1.0);
+}
+.fas.fa-history{
+  border: 1px solid grey;
+  border-radius: 2px;
+  padding: 20px 20px 20px 20px;
+  margin-right: 35px;
+  margin-bottom: 7px;
+}
+.fas.fa-history:hover{
+  -webkit-transform:scale(1.1);
+  transition: all .2s ease;
+  vertical-align: middle;
+}
+.header-right p{
+
 }
