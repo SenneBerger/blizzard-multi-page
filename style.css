@@ -62,8 +62,19 @@ li img{
   padding-right: 10px;
   margin-bottom: -6px;
 }
-ul li:first-child{
+.blizzard-list-name {
   font-size: 10px;
+  color: grey;
+  padding-left: 40px;
+  padding-top: 5px;
+}
+.Partner-games-list{
+  font-size: 10px;
+  color: grey;
+  padding-left: 40px;
+  padding-top: 5px;
+  border-right: 0.1px solid grey;
+
 }
 ul li{
   padding: 4px;
