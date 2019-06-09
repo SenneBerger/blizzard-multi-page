@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <script src="https://kit.fontawesome.com/fb08c0a972.js"></script>
 
-    <link rel="stylesheet" href="style.css">
-    <meta charset="utf-8">
-    <title>Setting</title>
-  </head>
-  <body>
-    <header>Settings</header>
+<head>
+  <script src="https://kit.fontawesome.com/fb08c0a972.js"></script>
+
+  <link rel="stylesheet" href="settings-style.css">
+  <meta charset="utf-8">
+  <title>Settings</title>
+</head>
+
+<body class="settings">
+  <!--header-settings-->
+  <div class="header-settings">
+    Settings
+  </div>
 
   <!-- sidebar-settings -->
   <div class="sidebar-settings">
-      <ul class="sidebar-list-settings">
-        <li><i class="fas fa-cogs"></i> General</li>
-        <li><i class="fas fa-music"></i> Sounds & Notifications</li>
-        <li><i class="fas fa-user-friends"></i> Friends & Chat</li>
-        <li><i class="fas fa-microphone-alt"></i> Voice Chat</li>
-        <li><i class="fas fa-video"></i> Streaming</li>
-        <li><i class="fas fa-download"></i> Game Install/Update</li>
-        <li><i class="fas fa-tools"></i> Game Settings</li>
-        <li><i class="fas fa-question-circle"></i> About</li>
-        <li><i class="fas fa-flask"></i> Beta</li>
-      </ul>
+    <ul class="sidebar-list-settings">
+      <li><i class="fas fa-cogs"></i> General</li>
+      <li><i class="fas fa-music"></i> Sounds & Notifications</li>
+      <li><i class="fas fa-user-friends"></i> Friends & Chat</li>
+      <li><i class="fas fa-microphone-alt"></i> Voice Chat</li>
+      <li><i class="fas fa-video"></i> Streaming</li>
+      <li><i class="fas fa-download"></i> Game Install/Update</li>
+      <li><i class="fas fa-tools"></i> Game Settings</li>
+      <li><i class="fas fa-question-circle"></i> About</li>
+      <li><i class="fas fa-flask"></i> Beta</li>
+    </ul>
   </div>
-  
+
   <!-- Settings-content -->
-  General
+  <div class="content-settings">
+    <div class="general-settings">
+      <h1>General</h1>
 
-  BATTLE.NET LANGUAGE
+      <h3>BATTLE.NET LANGUAGE</h3>
 
-  Launch Battle.net when you start your computer
+      <div class="general-list1"> English </div>
 
-  Launch Battle.net minimized to the system tray
+      <p>Launch Battle.net when you start your computer
 
-  Allow multiple instances of Battle.net
+        Launch Battle.net minimized to the system tray
 
-  <i class="far fa-question-circle"></i>
+        Allow multiple instances of Battle.net <i class="far fa-question-circle"></i></p>
 
-  WHEN I CLICK 'X' AT THE TOP OF THE WINDOW
+      <h3>WHEN I CLICK 'X' AT THE TOP OF THE WINDOW</h3>
+      <div class="general-list2"> Minimize Battle.net to system tray </div>
+      <h3>WHEN I LAUNCH A GAME</h3>
+      <div class="general-list3">Keep the Battle.net window open </div>
+      <div>Reset Dismissed Dialogs </div>
+      <i class="far fa-question-circle"></i>
+    </div>
 
-  Exit Battle.net
+    <div class="security-settings">
+      <h1>Security Settings</h1>
 
-  WHEN I LAUNCH A GAME
+      <p>Remember email adress <i class="far fa-question-circle"></i></p>
 
-  Keep the Battle.net window open
+      <p>Keep me logged in <i class="far fa-question-circle"></i></p>
+    </div>
+  </div>
+  <!--buttons-->
+  <footer class="footer-settings">
+    <div>Reset to Defaults</div>
+    <div>Done</div>
+  </footer>
 
-  Reset Dismissed Dialogs
+</body>
 
-  <i class="far fa-question-circle"></i>
-
-  Security Settings
-
-  Remember email adress <i class="far fa-question-circle"></i>
-
-  Keep me logged in <i class="far fa-question-circle"></i>
-
-  Reset tot Defaults
-
-  Done
-
-  </body>
 </html>
