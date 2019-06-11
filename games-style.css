@@ -1,185 +1,136 @@
+/* On all pages */
 
+    html {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #e5e5e5;
+    }
 
+    /*Links behavior*/
+    a:link {
+        color: rgb(255, 255, 255);
+    }
 
-/*      Most of this should be allright.
-        There might be some things we want to change or reposition.
-        Give me a shout on Ryver if you want to change something.       */
+    a:visited {
+        color: rgb(255, 255, 255);
+    }
 
+    a:hover {
+        color: rgb(255, 255, 255);
+    }
 
+    a:active {
+        color: rgb(255, 255, 255);
+    }
 
+/* On games, news & shop */
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #e5e5e5;
-  background-image: url("img/games-background.jpg");
-  background-repeat: no-repeat;
-  background-color: #cccccc;
-
+.games, .news {
+        display: grid;
+        grid-template-columns: 250px auto;
+        margin: 0;
+        grid-template-areas:
+          " header header"
+          "sidebar content"
 }
-/* Primary grid for everything */
-.games {
-  display: grid;
-  grid-template-columns: 250px auto;
-  margin: 0;
-  grid-template-areas:
-    " header header"
-    "sidebar content"
-}
-/* Header grid */
+
 .game-header {
-  grid-area: header;
-  display: grid;
-  grid-template-columns: 500px 400px 280px;
-  grid-template-areas:
-    "left . right";
-  width: 1200px;
-  height: 50px;
-  border-bottom: 0.1px solid grey;
-
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 500px 400px 280px;
+    grid-template-areas:
+      "left . right";
+    width: 100%;
+    height: 42px;
+    border-bottom: 0.1px solid grey;
 }
-/* Header grid position */
+
 .header-left {
-  grid-area: left;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  word-spacing: 20px;
-
-
+    grid-area: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    word-spacing: 20px; 
 }
-/* Header grid position */
+
 .header-right {
-  grid-area: right;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  word-spacing: 20px;
-
+    grid-area: right;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    word-spacing: 20px;
 }
 
-/* sidebar grid */
-.sidebar{
-  grid-area: sidebar;
-  width: 250px;
+.header-left:hover {
+    color: #ffffff;
 }
-/* sidebar list styling */
-.blizzard ul{
-  list-style: none;
-  font-size: 13px;
-  margin: 0;
-  border-right: 0.1px solid grey;
 
-}
-/* list icon styling */
-li img{
-  height: 22px;
-  padding-right: 10px;
-  margin-bottom: -6px;
-}
-/* list header styling */
-.blizzard-list-name {
-  font-size: 10px;
-  color: white;
-  padding-left: 40px;
-  padding-top: 5px;
-  border-right: 0.1px solid grey;
-}
-/* list header styling */
-.Partner-games-list{
-  font-size: 10px;
-  color: white;
-  padding-left: 40px;
-  padding-top: 5px;
-  border-right: 0.1px solid grey;
+/* Games */
+    .games {
+        background-image: url("img/games-background.jpg");
+        background-repeat: no-repeat;
+        background-color: #cccccc;
+    }
 
-}
-/* list styling */
-ul li{
-  padding: 4px;
-  color: #c6c6c6;
+    /* sidebar grid */
+    .sidebar{
+        grid-area: sidebar;
+        width: 250px;
+    }
 
-}
-/* List style */
-ul.blizz-list {
-  height: 250px;
-}
-/* Hovering list items NEED TO CHANGE THIS!!!!*/
-ul li:hover{
-  background-color: grey;
-  opacity: 0.9;
+    /* sidebar list styling */
+    .blizzard ul{
+    list-style: none;
+    font-size: 13px;
+    margin: 0;
+    border-right: 0.1px solid grey;
+    }
 
+    /* list icon styling */
+    li img{
+        height: 22px;
+        padding-right: 10px;
+        margin-bottom: -6px;
+    }
 
-}
-/* Content grid */
-.games-content{
-  grid-area: content;
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 120px 40px 160px 120px;
-  margin: 0;
-  grid-template-areas:
-    "logo . dance"
-    "icon . ."
-    "thrall cardbundle overwatch"
-    "install locate .";
+    /* list header styling */
+    .blizzard-list-name {
+        font-size: 10px;
+        color: white;
+        padding-left: 40px;
+        padding-top: 5px;
+        border-right: 0.1px solid grey;
+    }
 
-}
-/* Wow bfa logo position */
-.wow-logo {
-  grid-area: logo;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/*Thrall image position */
-.thrall {
-  grid-area: thrall;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  margin-left: 20px;
+    /* list header styling */
+    .Partner-games-list{
+        font-size: 10px;
+        color: white;
+        padding-left: 40px;
+        padding-top: 5px;
+        border-right: 0.1px solid grey;
+    }
 
-}
-/* gif position */
-.cardbundle {
-  grid-area: cardbundle;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-/* Overwatch image position */
-.overwatch-shop {
-  grid-area: overwatch;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  margin-right: 40px;
-}
-/* Page size */
-html{
-  max-width: 1200px;
-}
-/* Install button position */
-.install-button{
-  grid-area: install;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-content: space-around;
-  padding-left: 27px;
-  padding-top: 10px;
-}
-/* options and redeem a code text position */
-.wow-icons{
-  grid-area: icon;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 12px;
+    /* list styling */
+    ul li{
+        padding: 4px;
+        color: #c6c6c6;
+    }
 
+<<<<<<< HEAD:style.css
+    /* List style */
+    ul.blizz-list {
+        height: 250px;
+    }
+
+    /* Hovering list items NEED TO CHANGE THIS!!!!*/
+    ul li:hover{
+        background-color: grey;
+        opacity: 0.9;
+    }
+=======
 }
 /* options and redeem a code icon position */
 .wow-icons i{
@@ -203,6 +154,7 @@ div.installed{
   -webkit-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
 box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+border: 0.4px solid grey;
 }
 
 .thrall img:hover{
@@ -215,6 +167,7 @@ box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+  border: 0.4px solid grey;
 }
 .cardbundle img:hover{
   -webkit-transform:scale(1.3);
@@ -226,6 +179,7 @@ box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+  border: 0.4px solid grey;
 }
 .overwatch-shop img:hover{
   -webkit-transform:scale(1.3);
@@ -256,52 +210,440 @@ box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
   font-size: 20px;
   margin: 5px 40px 5px 0px;
 }
+>>>>>>> 06c81951866b135f665361ccb08f49a7ca07d7ef:games-style.css
 
-.install-button div:last-child:hover{
-  background: #35c1ff;
+    /* Content grid */
+    .games-content {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 120px 40px 160px 120px;
+        margin: 0;
+        grid-template-areas:
+        "logo . dance"
+        "icon . ."
+        "thrall cardbundle overwatch"
+        "install locate .";
+    }
 
-}
-.installed{
-  color: grey;
-  font-size: 13px;
-}
-/* hovering over icon will make them grey */
-i:hover{
-  -webkit-transform:scale(1.3);
-  transition: all .2s ease;
-  vertical-align: middle;
+    /* Wow bfa logo position */
+    .wow-logo {
+        grid-area: logo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-}
-/* hovering over list items will make them bigger */
-.blizz-list li:hover{
-  -webkit-transform:scale(1.0);
-  transition: all .2s ease;
-  vertical-align: middle;
+    /*Thrall image position */
+    .thrall {
+        grid-area: thrall;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin-left: 20px;
+    }
 
-}
-.blizz-list li:first-child:hover{
-  -webkit-transform:scale(1.0);
-}
+    /* gif position */
+    .cardbundle {
+        grid-area: cardbundle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
 
-.partner-list li:hover{
-  -webkit-transform:scale(1.0);
-  transition: all .2s ease;
-  vertical-align: middle;
-}
-.partner-list li:first-child:hover{
-  -webkit-transform:scale(1.0);
-}
-/* specific (subscription) icon positioning */
-.fas.fa-history{
-  border: 1px solid grey;
-  border-radius: 2px;
-  padding: 20px 20px 20px 20px;
-  margin-right: 35px;
-  margin-bottom: 7px;
-}
-/* hovering over sub icon will make it bigger */
-.fas.fa-history:hover{
-  -webkit-transform:scale(1.1);
-  transition: all .2s ease;
-  vertical-align: middle;
-}
+    /* Overwatch image position */
+    .overwatch-shop {
+        grid-area: overwatch;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin-right: 40px;
+    }
+
+    /* Page size */
+    html{
+        max-width: 1200px;
+    }
+
+    /* Install button position */
+    .install-button{
+        grid-area: install;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-content: space-around;
+        padding-left: 27px;
+        padding-top: 10px;
+    }
+
+    /* options and redeem a code text position */
+    .wow-icons{
+        grid-area: icon;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    /* options and redeem a code icon position */
+    .wow-icons i{
+        padding-left: 30px;
+        padding-right: 7px;
+    }
+
+    /* options and redeem a code icons become bigger on hover */
+    .wow-icons i:hover {
+        -webkit-transform:scale(1.1)
+    }
+
+    /* allready installed location */
+    div.installed {
+        grid-area: locate;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    /* thrall image styling */
+    .thrall img {
+        -webkit-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+    }
+  
+    .thrall img:hover{
+        -webkit-transform:scale(1.3);
+        transition: all .8s ease;
+        vertical-align: middle;
+    /* gif styling */
+    }
+
+    .cardbundle img {
+        -webkit-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+    }
+
+    .cardbundle img:hover {
+        -webkit-transform:scale(1.3);
+        transition: all .8s ease;
+        vertical-align: middle;
+    }
+
+    /* overwatch image styling */
+    .overwatch-shop img{
+        -webkit-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 20px 14px rgba(0,0,0,0.75);
+    }
+
+    .overwatch-shop img:hover{
+        -webkit-transform:scale(1.3);
+        transition: all .8s ease;
+        vertical-align: middle;
+    }
+
+    /* grid area: install position & styling */
+    .install-button div:first-child{
+        color: grey;
+        font-size: 10px;
+    }
+
+    .install-button div:nth-child(2){
+        border: 0.1px solid grey;
+        padding: 6px 6px 6px 3px;
+        font-size: 14px;
+        margin-right: 40px;
+    }
+
+    .install-button div:nth-child(2):hover {
+        background-color: grey;
+    }
+
+    .install-button div:last-child{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.1px solid grey;
+        background: #0299db;
+        padding: 10px 10px 10px 10px;
+        font-size: 20px;
+        margin: 5px 40px 5px 0px;
+    }
+  
+    .install-button div:last-child:hover{
+        background: #35c1ff;
+    }
+
+    .installed {
+        color: grey;
+        font-size: 13px;
+    }
+
+    /* hovering over icon will make them grey */
+    i:hover{
+        -webkit-transform:scale(1.3);
+        transition: all .2s ease;
+        vertical-align: middle;
+    }
+
+    /* hovering over list items will make them bigger */
+    .blizz-list li:hover{
+        -webkit-transform:scale(1.0);
+        transition: all .2s ease;
+        vertical-align: middle;
+    }
+
+    .blizz-list li:first-child:hover{
+        -webkit-transform:scale(1.0);
+    }
+    
+    .partner-list li:hover{
+        -webkit-transform:scale(1.0);
+        transition: all .2s ease;
+        vertical-align: middle;
+    }
+
+    .partner-list li:first-child:hover{
+        -webkit-transform:scale(1.0);
+    }
+
+    /* specific (subscription) icon positioning */
+    .fas.fa-history{
+        border: 1px solid grey;
+        border-radius: 2px;
+        padding: 20px 20px 20px 20px;
+        margin-right: 35px;
+        margin-bottom: 7px;
+    }
+
+    /* hovering over sub icon will make it bigger */
+    .fas.fa-history:hover{
+        -webkit-transform:scale(1.1);
+        transition: all .2s ease;
+        vertical-align: middle;
+    }
+
+/* News */
+    .news {
+        background-image: url("img/background-overwatch.jpg");
+        background-size: 100%;
+        background-color: #cccccc;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 300px auto;
+        margin: 0;
+        grid-template-areas:
+        "header header"
+        "sidebar content"
+    }
+
+    /* under header */
+    .news-list {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 30px;
+        width: 1200px;
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .news-list div:hover {
+        -webkit-transform:scale(1.1);
+        transition: all .2s ease;
+        vertical-align: middle;
+    }
+
+    .news a {
+        text-decoration: none;
+    }
+
+    /* News-content */
+    .news-content {
+        width: 80%;
+    }
+
+    .news-title p {
+        grid-area: content;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 25px;
+        padding: 20px 0px;
+    }
+
+    .news-topics img {
+        height: 150px;
+        width: 290px;
+    }
+
+    .news-topics div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .news-topics {
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 150px;
+        grid-template-areas:
+            "topic1 topic2 topic3";  
+    }
+
+    .topic1 {
+        grid-area: topic1;
+        overflow: hidden;
+    }
+
+    .topic1 img:hover {
+        -webkit-transform:scale(1.3);
+        transition: all .8s ease;
+        vertical-align: middle;
+    }
+
+    .topic2 {
+        grid-area: topic2;
+        overflow: hidden;
+    }
+
+    .topic2 img:hover {
+        -webkit-transform:scale(1.3);
+        transition: all .8s ease;
+        vertical-align: middle;
+    }
+
+    .topic3 {
+        grid-area: topic3;
+        overflow: hidden;
+    }
+
+    .topic3 img:hover {
+        -webkit-transform:scale(1.3);
+        transition: all .8s ease;
+        vertical-align: middle;
+    }
+
+    /* Recent news */
+    .recent-news img {
+        height: 100px;
+        width: 200px;
+    }
+
+    .recent-news h2 {
+        font-size: 15px;
+        font-weight: lighter;
+        padding: 5px 0px;
+        color: grey;
+    }
+
+    .recent-news h3 {
+        font-size: 20px;
+        padding: 5px 0px;
+    }
+
+    .recent-news p {
+        font-size: 15px;
+        padding: 5px 0px;
+        color: #939496;
+        font-weight: bolder
+    }
+
+    .recent-news i {
+        padding: 5px 0px;
+    }
+
+    .recent-news i:hover{
+        -webkit-transform:scale(1.1);
+        transition: all .2s ease;
+        vertical-align: middle;
+    }
+
+    .recent-news div {
+        border-bottom: 0.1px solid grey;
+    }
+
+    .recent-news {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 200px 700px;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+            "pic1 RN1"
+            "pic2 RN2"
+            "pic3 RN3"
+            "pic4 RN4"
+            "pic5 RN5";
+    }
+
+    .pic-N1 {
+        border-top: 0.1px solid grey;
+        grid-area: pic1;
+        display: flex;
+        align-items: center;
+        padding: 15px 0px;
+    }
+
+    .RN1-content {
+        border-top: 0.1px solid grey;
+        grid-area: RN1;
+        padding: 15px 0px 15px 25px;
+    }
+
+    .pic-N2 {
+        grid-area: pic2;
+        display: flex;
+        align-items: center;
+        padding: 15px 0px;
+    }
+
+    .RN2-content {
+        grid-area: RN2;
+        padding: 15px 0px 15px 25px;
+    }
+
+    .pic-N3 {
+        grid-area: pic3;
+        display: flex;
+        align-items: center;
+        padding: 15px 0px;
+    }
+
+    .RN3-content {
+        grid-area: RN3;
+        padding: 15px 0px 15px 25px;
+    }
+
+    .pic-N4 {
+        grid-area: pic4;
+        display: flex;
+        align-items: center;
+        padding: 15px 0px;
+    }
+
+    .RN4-content {
+        grid-area: RN4;
+        padding: 15px 0px 15px 25px;
+    }
+
+    .pic-N5 {
+        grid-area: pic5;
+        display: flex;
+        align-items: center;
+        padding: 15px 0px;
+    }
+
+    .RN5-content {
+        grid-area: RN5;
+        padding: 15px 0px 15px 25px;
+    }
+
+/* Setting */
+
+/* Shop */
