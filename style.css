@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 /* On all pages */
 
     html {
-        margin: 0;
-        display: flex;
+        
+        display: grid;
         justify-content: center;
+        position: relative;
         font-family: Arial, Helvetica, sans-serif;
         color: #e5e5e5;
     }
@@ -27,7 +30,7 @@
 
 /* On games, news & shop */
 
-.games, .news {
+.games, .news, .shopAN {
         display: grid;
         grid-template-columns: 250px auto;
         margin: 0;
@@ -72,6 +75,7 @@
         background-image: url("img/games-background.jpg");
         background-repeat: no-repeat;
         background-color: #cccccc;
+        background-size: 100%;
     }
 
     /* sidebar grid */
@@ -134,8 +138,8 @@
     .games-content {
         grid-area: content;
         display: grid;
-        grid-template-columns: 300px 300px 300px;
-        grid-template-rows: 120px 40px 160px 120px;
+        grid-template-columns: 300px 390px 300px;
+        grid-template-rows: 120px 40px 240px 120px;
         margin: 0;
         grid-template-areas:
         "logo . dance"
@@ -181,10 +185,6 @@
         margin-right: 40px;
     }
 
-    /* Page size */
-    html{
-        max-width: 1200px;
-    }
 
     /* Install button position */
     .install-button{
@@ -298,7 +298,11 @@
 
     .installed {
         color: grey;
-        font-size: 13px;
+        font-size: 15px;
+    }
+    .installed a {
+        text-decoration: none;
+        color: #0299db;
     }
 
     /* hovering over icon will make them grey */
@@ -347,17 +351,19 @@
 
 /* News */
     .news {
-        background-image: url("img/background-overwatch.jpg");
-        background-size: 100%;
-        background-color: #cccccc;
-        width: 100%;
-
+        
         display: grid;
         grid-template-columns: 300px auto;
-        margin: 0;
+        
         grid-template-areas:
         "header header"
         "sidebar content"
+    }
+    #bodynews {
+        background-image: url("img/background-overwatch.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+
     }
 
     /* under header */
@@ -772,6 +778,328 @@
         border: 0.1px solid #d6d9dd;
         opacity: 1;
     }
-  
 
 /* Shop */
+    #bodyAN {
+        font-family: 'Muli', sans-serif;
+        color: #e5e5e5;
+        background-image: url(img/bg-shop.jpg);
+        background-repeat: no-repeat;
+        background-size: 6000px 3000px;
+    }
+
+    /*NAV*/
+#navigatieAN {
+    display: grid;
+    grid-template-areas: "Home Games Services BlizzardGear Search Wishlist Blizzard-balance";
+    grid-template-columns: 250px 70px 70px 110px 300px 120px 336px;
+    height: 50px;
+    width: 1200px;
+    font-size: 15px;
+    background-color: rgba(2, 2, 94, 0.514);
+    border-bottom: 0.1px solid grey;
+}
+.homeAN {
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;  
+    margin-right: 5px;
+}
+.gamesAN, .servicesAN, .blizzardgearAN {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchbarAN {
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 20px;
+    border: 0.1px solid rgba(128, 128, 128, 0.315);
+    margin: 7px;
+    background-color: rgba(3, 2, 66, 0.603);
+}
+.WishListAN{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid rgba(255, 255, 255, 0.459);
+    border-right: 2px solid rgba(255, 255, 255, 0.459);
+    
+}
+.BlizzardBalanceAN {
+    
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    align-items: center;
+}
+
+/*Banner*/
+#backgroundimageAN{
+    background-image: url(img/bundle.png);
+    height: 485px;
+    width: 1200px;
+    background-repeat: no-repeat;
+    display: grid;
+}
+.introbuynowAN {
+    width: 500px;
+    height: 400px;
+    display: grid;
+    grid-template-areas: 
+    "logo" 
+    "intro" 
+    "button";
+    position: relative;
+    left: 100px;
+    top: 30px;
+    }
+.hearthstonelogooAN {
+    width: 500px;
+    height: 200px;
+    grid-area: logo;
+    display: flex;
+}
+.hearthstonelogooAN img {
+    width: 480px;
+    height: 200px;
+}
+.introAN {
+    grid-area: intro;
+    position: absolute;
+    left: 35px;
+    top: -100px;
+    width: 400px;
+    height: 60px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    color: rgb(192, 192, 192);
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+}
+button{
+    grid-area: button;
+    width: 300px;
+    height: 50px;
+    position: relative;
+    left: 85px;
+    top: -10px;
+    background-color: rgb(45, 104, 192);
+    font-size: 20px;
+    color: white;
+    border: 1px solid rgb(45, 104, 192);
+}
+button:hover {
+    background-color: rgb(76, 143, 245);
+    cursor: pointer;
+}
+.introbuynowAN a {
+    height: 0px;
+    width: 0px;
+}
+
+/*Logos*/
+#gamelogosAN {
+    display: grid;
+    grid-template-areas: " blzgms wow ow d3 hs hots sc2 sc d2 warcraft3 pg mw dest bo4 empty";
+    font-size: 15px;
+    background-color: rgba(151, 151, 255, 0.151);
+    border-top: 0.1px solid grey;
+    border-bottom: 0.1px solid grey;
+    grid-template-columns: 170px repeat(9 70px) 158px 80px 70px 70px;
+    height: 60px;
+    width: 1200px;
+}
+#gamelogosAN img {
+    height: 40px;
+    width: 40px;
+}
+.blizzardgmsAN {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 15px; 
+}
+.wowlogoAN, .owlogoAN, .diablo3logoAN, 
+.hslogoAN, .hotslogoAN, .starcraft2logoAN,
+.starcraftlogoAN,.diablo2AN {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wowlogoAN:hover {
+    transform: scale(1.2);
+}
+.owlogoAN:hover {
+    transform: scale(1.2);
+}
+.diablo3logoAN:hover {
+    transform: scale(1.2);
+}
+.hslogoAN:hover {
+    transform: scale(1.2);
+}
+.hotslogoAN:hover{
+    transform: scale(1.2);
+}
+.starcraft2logoAN:hover{
+    transform: scale(1.2);
+}
+.starcraftlogoAN:hover{
+    transform: scale(1.2);
+}
+.diablo2AN:hover{
+    transform: scale(1.2);
+}
+.warcraft3logoAN, .mwAN,.destinylogoAN, .cod4AN  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.warcraft3logoAN:hover{
+    transform: scale(1.2);
+}
+.pgAN{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin: 7px;
+    border-left: 2px solid rgba(255, 255, 255, 0.459);
+}
+.mwAN:hover{
+    transform: scale(1.2)
+}
+.destinylogoAN:hover{
+    transform: scale(1.2)
+}
+
+.cod4AN:hover{
+    transform: scale(1.2)
+}
+i {
+    color:rgb(116, 153, 253);
+}
+/*Recommended*/
+#recommendedAN{
+    width: 1200px;
+    height: 1000px;
+    display: grid;
+    grid-template-areas:  
+    "a1 a2 a3"
+    "a b c";
+}
+.rcmAN{
+    font-size: 40px;
+    margin-left: 58px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    width: 280px;
+
+}
+.rec1AN , .rec2AN , .rec3AN , .rec4AN , .rec5AN , .rec6AN {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 15px;
+}
+.rec1AN img:hover {
+    transform: scale(1.05);
+    box-shadow: -1px 0px 21px 0px rgba(0,0,0,0.75);
+}
+
+.rec2AN img:hover {
+    transform: scale(1.05);
+    box-shadow: -1px 0px 21px 0px rgba(0,0,0,0.75);
+}
+
+.rec3AN img:hover {
+    transform: scale(1.05);
+    box-shadow: -1px 0px 21px 0px rgba(0,0,0,0.75);
+}
+
+.rec4AN img:hover {
+    transform: scale(1.05);
+    box-shadow: -1px 0px 21px 0px rgba(0,0,0,0.75);
+}
+
+.rec5AN img:hover {
+    transform: scale(1.05);
+    box-shadow: -1px 0px 21px 0px rgba(0,0,0,0.75);
+}
+
+.rec6AN img:hover {
+    transform: scale(1.05);
+    box-shadow: -1px 0px 21px 0px rgba(0,0,0,0.75);
+}
+#footerAN {
+    display: grid;
+    grid-template-areas: 
+    "English"
+    "Blizzard"
+    "careers about support contact us press api"
+    "abc"
+    "cba"
+    "privacy terms cookies";
+    width: 1200px;
+    color: #e5e5e5a6;
+    
+}
+#footerAN a {
+    text-decoration: none;
+    color: #e5e5e5a6;
+}
+
+.blizzlogoAN img{
+    width: 200px;
+    height: 100px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.languageAN, .blizzlogoAN {
+    width: 1200px;
+    display: grid;
+    justify-content: center;
+}
+.infoAN {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.carAN, .aboAN, .supAN, .conAN, .preAN{
+    border-right: 1px solid #e5e5e5ab;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.apiAN {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.ARRAN, .ARR2AN{
+    display: flex;
+    justify-content: center;
+}
+.ARR2AN a{
+    text-decoration: none;
+    color: rgb(111, 160, 252);
+}
+.PTCAN {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.prAN, .trmAN{
+    border-right: 1px solid #e5e5e5ab;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.cooAN {
+    padding-left: 10px;
+}
