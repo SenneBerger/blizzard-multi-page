@@ -1,7 +1,9 @@
-body {
+/**SETTINGS**/
+.body-settings {
   border-left: 0.1px solid grey;
   border-right: 0.1px solid grey;
   border-bottom: 0.1px solid grey;
+  border-top: 0.1px solid grey;
   width: 1000px;
   font-family: Arial, Helvetica, sans-serif;
   color: #b2b2b2;
@@ -19,12 +21,14 @@ body {
 h1 {
   font-size: 16px;
   font-weight: normal;
+  margin-bottom: 20px;
 }
 
 h2 {
   font-size: 13px;
   font-weight: lighter;
   color: #5d6065;
+  margin-left: 10px;
 }
 
 i {
@@ -34,8 +38,15 @@ i {
 p {
   font-size: 13px;
   font-weight: lighter;
+  margin-left: 10px;
 }
 
+.checkbox i {
+  color: #5d6065;
+
+}
+
+/**settings-header*/
 .header-settings {
   background: rgb(34, 42, 57);
   background: -moz-linear-gradient(90deg, rgba(34, 42, 57, 1) 0%, rgba(40, 55, 84, 1) 50%, rgba(34, 42, 57, 1) 100%);
@@ -49,6 +60,7 @@ p {
   padding-left: 35px;
 }
 
+/**settings-sidebar**/
 .sidebar-settings {
   background-color: #2161c;
   display: grid;
@@ -76,6 +88,26 @@ p {
   padding: 20px;
 }
 
+.checkbox:hover, .checkbox i:hover {
+  color: #d6d9dd;
+  opacity: 1;
+}
+
+.minimzed-settings {
+  font-weight: lighter;
+  color: #5d6065;
+  margin-left: 20px;
+}
+
+.minimzed-settings i {
+  color: #5d6065;
+}
+
+.logged-in {
+  margin-left: 20px;
+}
+
+/**settings-footer**/
 .footer-settings {
   display: grid;
   grid-area: footer;
@@ -88,25 +120,19 @@ p {
   border-bottom: 0.1px solid grey;
 }
 
-.footer-settings {
+.footer-settings>* {
   display: flex;
-  align-items: center;
   justify-content: space-around;
-}
-
-
-.reset1 {
+  align-items: center;
   font-size: 13px;
   color: #048dc1;
   border: 0.1px solid grey;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-
 }
 
 .reset2 {
+  background-color: #171b23;
   font-size: 13px;
   color: #048dc1;
   border: 0.1px solid grey;
@@ -115,19 +141,51 @@ p {
   padding-left: 30px;
   padding-right: 30px;
   text-align: center;
-  width: 200px;
+  width: 100px;
+  margin-right: 420px;
+}
+
+.reset1 {
+  font-size: 13px;
+  color: #048dc1;
+  border: 0.1px solid grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  width: 170px;
+  margin-left: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.reset1:hover, .reset2:hover {
+  color: #d6d9dd;
+  border: 0.1px solid #d6d9dd;
+  opacity: 1;
 }
 
 .done {
   font-size: 13px;
+  color: white;
   border: 0.1px solid grey;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: inset 0px 0px 45px 37px #0D94D3;
+  background-color: rgb(13, 149, 212);
+  background: -moz-radial-gradient(circle, rgba(13, 149, 212, 1) 0%, rgba(8, 136, 195, 1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(13, 149, 212, 1) 0%, rgba(8, 136, 195, 1) 100%);
+  background: radial-gradient(circle, rgba(13, 149, 212, 1) 0%, rgba(8, 136, 195, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d95d4", endColorstr="#0888c3", GradientType=1);
 }
 
+.done:hover {
+  filter: brightness(150%);
+}
+
+/**settings-lists**/
 .general-list {
   display: flex;
   justify-content: space-between;
@@ -139,4 +197,11 @@ p {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.general-list:hover {
+  color: #d6d9dd;
+  border: 0.1px solid #d6d9dd;
+  opacity: 1;
 }
