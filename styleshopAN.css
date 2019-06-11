@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
+html{
+    display: grid;
+    justify-content: center;
+    position: relative;
+}
 #bodyAN {
     font-family: 'Muli', sans-serif;
     color: #e5e5e5;
     background-image: url(img/bg-shop.jpg);
     background-repeat: no-repeat;
-    background-size: 1220px 2200px;
+    background-size: 5500px 3000px;
 }
 /*Header*/
 .gamesSenne {
