@@ -82,6 +82,7 @@
 .sidebar-settings i {
   color: #048dc1;
 }
+
 .content-settings {
   grid-area: content;
   display: grid;
