@@ -1,5 +1,5 @@
 * {
-   margin: 0; 
+   margin: 0;
 }
 
 .news {
@@ -7,11 +7,11 @@
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     color: #e5e5e5;
-    background-image: url("../../../background-overwatch.jpg");
+    background-image: url("img/background-overwatch.jpg");
     background-size: 100%;
     background-color: #cccccc;
     width: 100%;
-   
+
 
     display: grid;
     grid-template-columns: 300px auto;
@@ -44,7 +44,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    word-spacing: 20px; 
+    word-spacing: 20px;
 }
 
 .header-right {
@@ -128,7 +128,7 @@ a:active {
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 150px;
     grid-template-areas:
-        "topic1 topic2 topic3";  
+        "topic1 topic2 topic3";
 }
 
 .topic1 {
