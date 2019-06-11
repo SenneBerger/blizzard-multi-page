@@ -10,6 +10,9 @@
         font-family: Arial, Helvetica, sans-serif;
         color: #e5e5e5;
     }
+    html a {
+        text-decoration: none;
+    }
 
     /*Links behavior*/
     a:link {
@@ -361,7 +364,7 @@
     }
     #bodynews {
         background-image: url("img/background-overwatch.jpg");
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         background-size: 100%;
 
     }
