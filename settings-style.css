@@ -41,9 +41,7 @@
   margin-left: 20px;
 }
 
-.checkbox i {
-  color: #5d6065;
-}
+
 
 /**settings-header*/
 .header-settings {
@@ -81,6 +79,9 @@
   padding-bottom: 200px;
 }
 
+.sidebar-settings i {
+  color: #048dc1;
+}
 .content-settings {
   grid-area: content;
   display: grid;
