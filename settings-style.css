@@ -18,32 +18,31 @@
     "sidebar footer"
 }
 
-h1 {
+.general-settings h1 {
   font-size: 16px;
   font-weight: normal;
   margin-bottom: 20px;
 }
 
-h2 {
+.general-settings h2 {
   font-size: 13px;
   font-weight: lighter;
   color: #5d6065;
   margin-left: 10px;
 }
 
-i {
+.general-settings i {
   color: #048dc1;
 }
 
-p {
+.general-settings p {
   font-size: 13px;
   font-weight: lighter;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .checkbox i {
   color: #5d6065;
-
 }
 
 /**settings-header*/
